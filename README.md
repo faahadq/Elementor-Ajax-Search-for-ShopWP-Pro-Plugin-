@@ -45,7 +45,7 @@ Follow these steps to configure the Ajax search functionality for ShopWP Pro Plu
 
 5. **Configure Ajax Search Parameters**:
 
-   - Inside the `ajax-search.js` file, you can customize the search parameters to match your specific requirements. For example, you may need to adjust the search URL and the way results are displayed.
+   - Inside the `ajax-search.js` file, you can customize the search parameters to match your specific requirements. For example, you may need to adjust the search form ID and the way results are displayed.
 
 6. **Test Your Ajax Search**:
 
