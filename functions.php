@@ -1,5 +1,15 @@
 <?php 
-// Show ajax results
+// Adding js for Ajax results
+function oceanwp_child_enqueue_parent_style() {
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('ajax-search', get_stylesheet_directory_uri() . '/js/ajax-search.js', array('jquery'), '1.0', true);
+	wp_localize_script('ajax-search', 'ajaxsearch', array('ajaxurl' => admin_url('admin-ajax.php')));
+	
+}
+
+add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+// Show Ajax results
 function ajax_search() {
 	$query = sanitize_text_field($_POST['query']);
 	$results = array();
